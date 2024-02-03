@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'contact_us.css' %}">
+</head>
+<body>
+    <h1 style="color: rgb(26, 10, 10); text-align: center; background-color: rgb(220, 228, 216);"> DT7 Constructions Contact Form</h1>
+    <header class="header">
+        <img src="{% static 'contact.jpg' %}" alt="Full Width Image" class="header-image">
+        <div class="header-content">
+            <h1>Contact Us</h1>
+            <div class="subheading">
+                <h2>Get in Touch</h2>
+                <h4>Please fill out this form with any specific information regarding your needs, and send it to us. We will contact you promptly to discuss the next steps in the process of planning and completing your project within budget & in a timely manner.</h4>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <form action="" method="post" class="contact-form">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="marketing">Marketing Interest:</label>
+                <select id="marketing" name="marketing" required>
+                    <option value="sales">Sales</option>
+                    <option value="careers">Careers</option>
+                    <option value="others">Others</option>
+                </select>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <input type="submit" value="Submit" class="submit-button">
+            </form>
+        </div>
+        <div class="right">
+            <h2>Contact Information</h2>
+            <h4><span>&#9742;</span> Call Us: +1 234 5678</h4>
+            <h4><span>&#x1F4EC;</span> Locations: Hyderabad, City, India</h4>
+            <h4><span>&#9993;</span> Email: Dt7@example.com</h4>
+        </div>
+    </div>
+</body>
+</html>

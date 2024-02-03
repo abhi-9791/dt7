@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{% static 'logo.jpg' %}" alt="Dt7 Constructions Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#what-we-are">What We Are</a></li>
+            <li>Marketing</li>
+            <li>Solutions</li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Welcome to DT7 Constructions</h1>
+        <br>  <br>
+        
+            
+        <img src="{% static 'top.jpg' %}" alt="Full Width Image" style="width: 100%; height: auto;">
+
+        <br>  <br>
+        
+
+        <section id="about">
+            <img src="{% static 'aout_image.jpg' %}" alt="About Image">
+            <div>
+                <h2>About Us</h2>
+                <p>At DT7 Solutions, we believe that inside every impossibility, there is a possibility trying to emerge. We are a team of creative thinkers and problem solvers dedicated to pushing the boundaries of what is achievable by assisting brands in reaching their goals. We leverage our experience working with major global brands to drive creative innovation that yields tangible results. Scroll down to learn more about the team behind this software company in Guntur.</p>
+            </div>
+        </section>
+        <br><br>
+        <section id="what-we-are">
+            <div>
+                <h2>What We Are</h2>
+                <p>Etiam at lectus nunc. Proin dictum, est nec efficitur sodales, sapien justo ultricies sapien, eget consequat quam odio at lectus. Curabitur et risus felis.</p>
+            </div>
+            <img src="{% static 'where_we_are.jpg' %}" alt="What We Are Image">
+        </section>
+        <br>
+        <br>
+
+
+        <section id="footer">
+            <div>
+                <h3>Software development company in Hyderabad</h3>
+                <p>ABOUT COMPANY<br>
+                    At DT7 Solutions, we believe that inside every impossible is a possible trying to get out. We are a team of creative thinkers and problem solvers dedicated to expanding the limits of what is possible by helping brands achieve their goals.</p>
+            </div>
+            <div>
+                <h3>LATEST BLOG POST</h3>
+                <ul>
+                    <li>Best IT Solutions in South India...<br>
+                        <span>20 April 2017 | by Sai krishna</span></li>
+                    <li>Best web design company in Guntur...<br>
+                        <span>20 April 2017 | by Sai krishna</span></li>
+                    <li>Web design: 8 Characteristics of a user-friendly website...<br>
+                        <span>20 April 2017 | by Dinesh Kodali</span></li>
+                </ul>
+            </div>
+            <div>
+                <p>&copy; 2024 DT7 Constructions. All Rights Reserved.</p>
+                <p>Address: XYZ Street, Hyderabad, Telangana, India</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

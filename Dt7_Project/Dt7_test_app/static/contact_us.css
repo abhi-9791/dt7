@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #e1e1e1;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -18,13 +18,18 @@ body {
 .left {
     flex: 1;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #e9f2d9;
 }
 
 .right {
+    text-align: center;
+    text-indent: 0cqh;
+    
     flex: 1;
-    padding: 20px;
-    background-color: #e1e1e1;
+    padding: 20px;  
+    max-width: 500px;
+    height: 360px;
+    background-color: #0c94215c;
 }
 
 h2, h4 {
@@ -79,7 +84,7 @@ h2, h4 {
     background-color: #055c0c;
     color: #fff;
     border: none;
-    border-radius: 24px;
+    border-radius: 44px;
     padding: 10px 150px;
     cursor: pointer;
     transition: background-color 0.3s ease;

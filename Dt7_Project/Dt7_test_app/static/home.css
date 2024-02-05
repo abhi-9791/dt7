@@ -4,7 +4,7 @@ body, h1, h2, h3, p, ul, li {
 }
 body {
         /* background-image: url('back1.jpg'); Add path to your background image */
-        background-color: rgb(235, 234, 229);
+        background-color: rgb(242, 248, 240);
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-family: Arial, sans-serif; /* Fallback font */
@@ -48,7 +48,7 @@ h1{
 
 .nav-links li a {
     text-decoration: none;
-    color: #f0f4f7;
+    color: #f0fffd;
     transition: color 0.3s ease;
 }
 

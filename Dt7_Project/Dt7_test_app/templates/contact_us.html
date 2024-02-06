@@ -54,40 +54,44 @@
         </div>
         
         <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent form submission
-        
-                // Get form data
-                var formData = new FormData(this);
-        
-                // Send form data using AJAX
-                fetch(this.action, {
-                    method: this.method,
-                    body: formData,
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest' // Add this header to identify AJAX request
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        // Show success message popup
-                        document.getElementById('success-popup').style.display = 'block';
-        
-                        // Hide success message popup after 3 seconds (3000 milliseconds)
-                        setTimeout(function() {
-                            document.getElementById('success-popup').style.display = 'none';
-                        }, 3000);
-                    } else {
-                        console.error('Form submission failed.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent form submission
+            
+                    // Get form data
+                    var formData = new FormData(this);
+            
+                    // Send form data using AJAX
+                    fetch(this.action, {
+                        method: this.method,
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest' // Add this header to identify AJAX request
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Show success message popup
+                            document.getElementById('success-popup').style.display = 'block';
+            
+                            // Clear form fields
+                            this.reset(); // Reset the form
+            
+                            // Hide success message popup after 3 seconds (3000 milliseconds)
+                            setTimeout(function() {
+                                document.getElementById('success-popup').style.display = 'none';
+                            }, 3000);
+                        } else {
+                            console.error('Form submission failed.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
                 });
             });
-        });
-        </script>
+            </script>
+            
     </div>
     
 </body>

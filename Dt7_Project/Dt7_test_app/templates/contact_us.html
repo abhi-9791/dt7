@@ -56,28 +56,28 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault(); // Prevent form submission
+                    event.preventDefault(); 
             
-                    // Get form data
+                  
                     var formData = new FormData(this);
             
-                    // Send form data using AJAX
+                   
                     fetch(this.action, {
                         method: this.method,
                         body: formData,
                         headers: {
-                            'X-Requested-With': 'XMLHttpRequest' // Add this header to identify AJAX request
+                            'X-Requested-With': 'XMLHttpRequest' 
                         }
                     })
                     .then(response => {
                         if (response.ok) {
-                            // Show success message popup
+                           
                             document.getElementById('success-popup').style.display = 'block';
             
-                            // Clear form fields
-                            this.reset(); // Reset the form
+                           
+                            this.reset(); 
             
-                            // Hide success message popup after 3 seconds (3000 milliseconds)
+                           
                             setTimeout(function() {
                                 document.getElementById('success-popup').style.display = 'none';
                             }, 3000);

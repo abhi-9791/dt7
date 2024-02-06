@@ -13,4 +13,4 @@ def Contact_Us_View(request):
             return redirect('contact')  # Redirect to a success URL after form submission
     else:
         form =ContactUsForm()
-    return render(request, 'contact_us.html', {'form': form})
+    return render(request, 'contact_us.html', {'form': form })
